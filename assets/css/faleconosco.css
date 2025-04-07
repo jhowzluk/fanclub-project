@@ -1,6 +1,11 @@
 body {
     background-color: rgb(38, 38, 38);
     flex: 1; 
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    width: 0; 
 }
 
 .container {
