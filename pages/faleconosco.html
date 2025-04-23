@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sengoku | Fale Conosco</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/faleconosco.css">
     <link rel="shortcut icon" href="../assets/img/samurai-hat.png" type="image/x-icon">
 </head>
@@ -18,28 +17,43 @@
         </nav>
     </header>
     <div class="container">
-        <form action="#" method="post" class="contact-form">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="phone">Telefone:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="reason">Motivo do Contato:</label>
-            <select id="reason" name="reason" required>
-                <option value="" disabled selected>Selecione um motivo</option>
-                <option value="duvida">Dúvida</option>
-                <option value="sugestao">Sugestão</option>
-                <option value="reclamacao">Reclamação</option>
-            </select>
-            
-            <label for="comments">Comentários:</label>
-            <textarea id="comments" name="comments" rows="5" required></textarea>
-            
-            <button type="submit">Enviar</button>
+        <form name="frmfaleconosco" action="#" method="post">
+            <fieldset class="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="data-nascimento">Data Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label>Gênero:</label>
+                <div class="radio-group">
+                    <label for="masculino">
+                        <input type="radio" id="masculino" name="genero" value="masculino" required>
+                        Masculino
+                    </label>
+                    <label for="feminino">
+                        <input type="radio" id="feminino" name="genero" value="feminino" required>
+                        Feminino
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="contact-form">
+                <label for="reason">Motivo do Contato:</label>
+                <select id="reason" name="reason" required>
+                    <option value="" disabled selected>Selecione um motivo</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                </select>
+                <label for="comments">Comentários:</label>
+                <textarea id="comments" name="comments" rows="5" required></textarea>
+                <div class="button-group">
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </fieldset>
         </form>
     </div>
     <footer>
