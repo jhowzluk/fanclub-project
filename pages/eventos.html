@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="../assets/css/eventos.css">
   <link rel="shortcut icon" href="../assets/img/samurai-hat.png" type="image/x-icon">
 </head>
+
 <body>
   <header>
     <a href="../index.html"><img src="../assets/img/samurai-logo.png" alt="Samurai Logo" class="header-icon"></a>
@@ -112,7 +114,24 @@
   <footer>
     <p>&copy; 2025 Jhowzluk. Todos os direitos reservados.</p>
   </footer>
-  
-  <script src="../assets/js/script.js"></script>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const button = document.getElementById("back-to-top");
+      if (window.scrollY > 200) { // Exibe o botão após 200px de rolagem
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Rola suavemente
+      });
+    }
+  </script>
 </body>
+
 </html>
