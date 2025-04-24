@@ -17,10 +17,10 @@
         </nav>
     </header>
     <div class="container">
-        <form name="frmfaleconosco" action="#" method="post">
+        <form name="frmfaleconosco" action="#" method="post" onsubmit="return validaFaleConosco()">
             <fieldset class="contact-form">
                 <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="txtname">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="data-nascimento">Data Nascimento:</label>
@@ -58,6 +58,8 @@
     </div>
     <footer>
         <p>&copy; 2025 Jhowzluk. Todos os direitos reservados.</p>
-    </footer>    
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
