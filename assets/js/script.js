@@ -1,5 +1,10 @@
 function validaFaleConosco() {
-    if (document.getElementById("name").value == "") {
+    var nome = document.getElementById("name").value;
+    var expRegNome = new RegExp("^[A-zA-u]{3,}([ ]{1}[A-zÀ-ü]{2,})+$");
+    var fone = document.getElementById("phone").value;
+    var expRegFone = new RegExp("^[(]{1}[1-9]{2}[)]{1}[0-9]{4,5}[-]{1}[0-9]{4}$");
+
+    if (!expRegNome.test(nome)) {
         alert("Preencha o campo Nome.");
         document.getElementById("name").focus();
         return false;
@@ -14,7 +19,7 @@ function validaFaleConosco() {
         document.getElementById("data-nascimento").focus();
         return false;
     }
-    if (document.getElementById("phone").value == "") {
+    if (!expRegFone.test(fone)) {
         alert("Preencha o campo Telefone.");
         document.getElementById("phone").focus();
         return false;
@@ -79,4 +84,3 @@ function verificaMotivo(reason) {
             elemento.removeChild(elemento.firstChild);
     }
 }
-
