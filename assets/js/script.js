@@ -1,9 +1,9 @@
 function validaFaleConosco() {
     var nome = document.getElementById("name").value;
-    var expRegNome = new RegExp("^[A-zA-u]{3,}([ ]{1}[A-zÀ-ü]{2,})+$");
+    var expRegNome = /^[A-zA-u]{3,}([ ]{1}[A-zÀ-ü]{2,})+$/;
     var fone = document.getElementById("phone").value;
-    var expRegFone = new RegExp("^[(]{1}[1-9]{2}[)]{1}[0-9]{4,5}[-]{1}[0-9]{4}$");
-
+    var expRegFone = /^[(]{1}[1-9]{2}[)]{1}[ ]{1}[0-9]{4,5}[-]{1}[0-9]{4}$/;
+    
     if (!expRegNome.test(nome)) {
         alert("Preencha o campo Nome.");
         document.getElementById("name").focus();
